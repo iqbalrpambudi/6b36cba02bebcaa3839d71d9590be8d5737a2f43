@@ -54,7 +54,7 @@ export const HeaderComponent = styled.div`
   z-index: 1;
   top: 0;
   overflow: hidden;
-  width: 460px;
+  width: 375px;
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `
@@ -151,5 +151,43 @@ export const CardComponents = styled.div`
         }
       }
     }
+  }
+`
+export const ContainerComponent = styled.div`
+  padding: 0 16px;
+  overflow-y: auto;
+  display: block;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+`
+export const CartComponent = styled.div`
+cursor: pointer;
+  width: 360px;
+  display: flex;
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  margin-left: -180px;
+  color: white;
+  background-color: #a23530;
+  border-radius: 8px;
+  padding: 16px;
+  .cart__content {
+    width: 80%;
+    .cart__content__title {
+      font-size: ${font.lg};
+      font-weight:600
+    }
+    .cart__content__subtitle {
+      font-size: ${font.md};
+    }
+  }
+  .cart__icon {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: ${font.sm};
   }
 `

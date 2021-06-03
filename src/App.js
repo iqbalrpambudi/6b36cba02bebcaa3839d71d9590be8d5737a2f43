@@ -7,7 +7,7 @@ function App() {
     <div
       className="main-app"
       style={{
-        maxWidth: `460px`,
+        maxWidth: `375px`,
         margin: `0 auto`,
         width: `100%`,
       }}

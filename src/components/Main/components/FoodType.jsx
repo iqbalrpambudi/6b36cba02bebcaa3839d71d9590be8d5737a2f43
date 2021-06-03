@@ -4,6 +4,7 @@ import { setDinner, setLunch } from "../../../Redux/action/action"
 import { useDispatch } from "react-redux"
 function FoodType(props) {
   const dispatch = useDispatch()
+  
   return (
     <FoodTypesComponent {...props}>
       <div className="foodtypes">

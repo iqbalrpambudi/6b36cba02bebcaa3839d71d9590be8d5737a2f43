@@ -5,10 +5,10 @@ import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import { Provider } from "react-redux"
 import { createStore } from "redux"
-import FoodTypeReducer from './Redux/reducer/FoodTypeReducer'
+import allReducers from './Redux/reducer'
 
 const store = createStore(
-  FoodTypeReducer,
+  allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
