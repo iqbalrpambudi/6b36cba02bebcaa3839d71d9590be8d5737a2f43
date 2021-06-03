@@ -7,7 +7,14 @@ const font = {
   lg: "16px",
   xl: "20px",
 }
-
+const color = {
+  primary: "#f9423a",
+  secondary: "#a23530",
+  dark: "#424749",
+  light: "#6e7679",
+  lighter: "#e2e4e4",
+  whitesmoke: "#f1f1f2",
+}
 export const CalendarComponent = styled.div`
   display: flex;
   overflow: auto;
@@ -42,10 +49,11 @@ export const LocationComponent = styled.div`
     padding: 8px;
     .location__content__title {
       font-size: ${font.xs};
-      color: gray;
+      color: ${color.light};
     }
     .location__content_address {
       font-size: ${font.xl};
+      color: ${color.dark};
     }
   }
 `
@@ -64,29 +72,33 @@ export const FoodTypesComponent = styled.div`
     display: inline-flex;
     width: 100%;
     height: 40px;
-    border: 1px solid #e2e4e4;
+    /* border: 1px solid ${color.lighter}; */
     overflow: hidden;
     border-radius: 8px;
     .foodtypes__button {
-      border: 1px #e2e4e4 solid;
+      border: 1px solid ${color.lighter};
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     .foodtypes__button--dinner {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
       background-color: ${(props) =>
-        props.type === "dinner" ? "black" : "white"};
-      color: ${(props) => (props.type === "dinner" ? "white" : "black")};
+        props.type === "dinner" ? color.dark : "white"};
+      color: ${(props) => (props.type === "dinner" ? "white" : color.dark)};
       border: 1px solid
-        ${(props) => (props.type === "dinner" ? "black" : "#e2e4e4")};
+        ${(props) => (props.type === "dinner" ? color.dark : color.lighter)};
     }
     .foodtypes__button--lunch {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
       background-color: ${(props) =>
-        props.type === "lunch" ? "black" : "white"};
-      color: ${(props) => (props.type === "lunch" ? "white" : "black")};
+        props.type === "lunch" ? color.dark : "white"};
+      color: ${(props) => (props.type === "lunch" ? "white" : color.dark)};
       border: 1px solid
-        ${(props) => (props.type === "dinner" ? "#e2e4e4" : "black")};
+        ${(props) => (props.type === "dinner" ? color.lighter : color.dark)};
     }
   }
 `
@@ -107,7 +119,7 @@ export const CardComponents = styled.div`
       align-items: center;
       small {
         font-size: ${font.lg};
-        color: #6e7679;
+        color: ${color.light};
         font-weight: 500;
       }
     }
@@ -116,11 +128,11 @@ export const CardComponents = styled.div`
         font-size: ${font.xl};
         margin: 8px 0;
         font-weight: 500;
-        color: #424749;
+        color: ${color.dark};
       }
       small {
         font-size: ${font.md};
-        color: #6e7679;
+        color: ${color.light};
         font-weight: 500;
       }
     }
@@ -132,7 +144,7 @@ export const CardComponents = styled.div`
       .content__footer__price {
         font-size: ${font.xl};
         font-weight: 500;
-        color: #424749;
+        color: ${color.dark};
       }
       .content__footer__button {
         display: flex;
@@ -146,7 +158,7 @@ export const CardComponents = styled.div`
           font-weight: 500;
           width: 120px;
           height: 44px;
-          background-color: #f9423a;
+          background-color: ${color.primary};
           border-radius: 8px;
         }
       }
@@ -162,7 +174,7 @@ export const ContainerComponent = styled.div`
   }
 `
 export const CartComponent = styled.div`
-cursor: pointer;
+  cursor: pointer;
   width: 360px;
   display: flex;
   position: fixed;
@@ -170,14 +182,14 @@ cursor: pointer;
   left: 50%;
   margin-left: -180px;
   color: white;
-  background-color: #a23530;
+  background-color: ${color.secondary};
   border-radius: 8px;
   padding: 16px;
   .cart__content {
     width: 80%;
     .cart__content__title {
       font-size: ${font.lg};
-      font-weight:600
+      font-weight: 600;
     }
     .cart__content__subtitle {
       font-size: ${font.md};

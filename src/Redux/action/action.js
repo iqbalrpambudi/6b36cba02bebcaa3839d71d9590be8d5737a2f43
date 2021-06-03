@@ -1,10 +1,8 @@
-import { DINNER, LUNCH } from "../constant/constant"
-
-export function setDinner(payload) {
-  return { type: DINNER, payload }
+export function setDinner() {
+  return { type: "DINNER" }
 }
-export function setLunch(payload) {
-  return { type: LUNCH, payload }
+export function setLunch() {
+  return { type: "LUNCH" }
 }
 export function addProduct(payload) {
   return {
@@ -12,11 +10,11 @@ export function addProduct(payload) {
     payload: {
       id: payload.id,
       name: payload.name,
-      qty: payload.qty,
+      price: payload.price,
     },
   }
 }
-export function removeProduct(id) {
+export function removeProduct() {
   return {
     type: "REMOVE_PRODUCT",
   }

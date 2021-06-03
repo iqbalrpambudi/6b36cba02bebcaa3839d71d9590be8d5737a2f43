@@ -1,8 +1,8 @@
 import React from "react"
-import { CardComponents } from "../../../style/style"
+import { CardComponents } from "../../style/style"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons"
-import { addProduct } from "../../../Redux/action/action"
+import { addProduct } from "../../Redux/action/action"
 import { useDispatch } from "react-redux"
 
 function Card(props) {
@@ -13,7 +13,7 @@ function Card(props) {
       <img src="https://picsum.photos/200/300" alt="food" />
       <div className="content">
         <div className="content__rating">
-          <small>4.5</small>
+          <small>{props.rating}</small>
           <FontAwesomeIcon
             icon={faStar}
             color={`#f9423a`}
@@ -21,15 +21,23 @@ function Card(props) {
           />
         </div>
         <div className="content__title">
-          <h4>Roasted Chicken</h4>
-          <small>by Kulina</small>
+          <h4>{props.name}</h4>
+          <small>{props.by}</small>
         </div>
         <div className="content__footer">
-          <div className="content__footer__price">Rp 35.000</div>
+          <div className="content__footer__price">
+            {convertToRupiah(props.price)}
+          </div>
           <div className="content__footer__button">
             <a
               onClick={() =>
-                dispatch(addProduct({ id: 1, name: "Roasted Chicken", qty: 1 }))
+                dispatch(
+                  addProduct({
+                    id: props.id,
+                    name: props.name,
+                    price: props.price,
+                  })
+                )
               }
             >
               ADD{" "}
@@ -43,3 +51,18 @@ function Card(props) {
 }
 
 export default Card
+
+export const convertToRupiah = (angka) => {
+  angka = parseInt(angka)
+  let rupiah = ""
+  let angkarev = angka.toString().split("").reverse().join("")
+  for (let i = 0; i < angkarev.length; i++)
+    if (i % 3 === 0) rupiah += angkarev.substr(i, 3) + "."
+  return (
+    "Rp " +
+    rupiah
+      .split("", rupiah.length - 1)
+      .reverse()
+      .join("")
+  )
+}

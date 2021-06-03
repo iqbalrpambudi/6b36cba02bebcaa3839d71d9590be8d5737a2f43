@@ -1,6 +1,6 @@
 import React from "react"
-import { FoodTypesComponent } from "../../../style/style"
-import { setDinner, setLunch } from "../../../Redux/action/action"
+import { FoodTypesComponent } from "../../style/style"
+import { setDinner, setLunch } from "../../Redux/action/action"
 import { useDispatch } from "react-redux"
 function FoodType(props) {
   const dispatch = useDispatch()

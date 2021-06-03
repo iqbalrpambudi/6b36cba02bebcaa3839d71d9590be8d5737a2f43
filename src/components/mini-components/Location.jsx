@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowLeft, faChevronDown } from "@fortawesome/free-solid-svg-icons"
-import { LocationComponent } from "../../../style/style"
+import { LocationComponent } from "../../style/style"
 
 function Location(props) {
   return (

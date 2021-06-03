@@ -1,9 +1,8 @@
 import React from "react"
 import moment from "moment"
-import { CalendarComponent } from "../../../style/style"
+import { CalendarComponent } from "../../style/style"
 
 function Calendar(props) {
-  const [active, setActive] = React.useState()
   return (
     <CalendarComponent>
       {getlist2Weeks().map((data, index) => {
