@@ -6,7 +6,6 @@ import { useSelector } from "react-redux"
 
 function Cart(props) {
   const totalitem = useSelector((state) => state.productlist.length)
-  const totalprice = useSelector
   return (
     <CartComponent>
       <div className="cart__content">
