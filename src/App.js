@@ -4,7 +4,14 @@ import Main from "./components/Main/Main.jsx"
 
 function App() {
   return (
-    <div className="main-app" style={{ maxWidth: `460px`, margin: `0 auto` }}>
+    <div
+      className="main-app"
+      style={{
+        maxWidth: `460px`,
+        margin: `0 auto`,
+        width: `100%`,
+      }}
+    >
       <Header />
       <Main />
     </div>

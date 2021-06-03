@@ -6,13 +6,13 @@ import { useSelector } from "react-redux"
 function Main(props) {
   const foodtype = useSelector((state) => state)
   return (
-    <>
+    <div style={{ marginTop: `117px` }}>
       <FoodType type={foodtype} />
       <div style={{ padding: `0 16px`, overflowY: `auto`, display: "block" }}>
         <Card />
         <Card />
       </div>
-    </>
+    </div>
   )
 }
 

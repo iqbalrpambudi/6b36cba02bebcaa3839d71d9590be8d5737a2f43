@@ -50,9 +50,12 @@ export const LocationComponent = styled.div`
   }
 `
 export const HeaderComponent = styled.div`
-  position: relative;
+  position: fixed;
   z-index: 1;
-  width: 100%;
+  top: 0;
+  overflow: hidden;
+  width: 460px;
+  background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 `
 export const FoodTypesComponent = styled.div`
