@@ -8,7 +8,10 @@ function Card(props) {
 
   return (
     <CardComponents>
-      <img src="https://picsum.photos/200/300" alt="food" />
+      <img
+        src={require(`../../assets/images/${props.photo}`).default}
+        alt="food"
+      />
       <div className="content">
         <div className="content__rating">
           <small>{props.rating}</small>

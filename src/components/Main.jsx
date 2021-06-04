@@ -3,7 +3,7 @@ import FoodType from "./mini-components/FoodType"
 import Card from "./mini-components/Card"
 import Cart from "./mini-components/Cart"
 import { useSelector } from "react-redux"
-import { ContainerComponent } from "../style/style"
+import { ContainerComponent,Date } from "../style/style"
 import { Products } from "../assets/Products"
 
 function Main(props) {
@@ -13,6 +13,7 @@ function Main(props) {
     <div style={{ padding: `117px 0` }}>
       <FoodType type={foodtype} />
       <ContainerComponent>
+        <Date>Kamis, 13 Maret 2019</Date>
         {Products.filter((data) => data.foodtype === foodtype).map(
           (data, index) => {
             return <Card key={index} {...data} />

@@ -22,17 +22,20 @@ export const CalendarComponent = styled.div`
     display: none;
   }
   .calendar__item {
+    height: 56px;
     padding: 8px;
     display: flex;
     flex-wrap: wrap;
+    border-radius: 28px;
     .calendar__item__day {
       width: 40px;
       text-align: center;
       font-weight: 400;
+      font-size: ${font.sm};
     }
     .calendar__item__date {
       width: 40px;
-      font-size: ${font.xl};
+      font-size: ${font.lg};
       text-align: center;
       font-weight: 500;
     }
@@ -306,4 +309,9 @@ export const ModalComponent = styled.div`
       }
     }
   }
+`
+export const Date = styled.div`
+margin: 16px 0;
+font-weight:500;
+color: ${color.dark};
 `

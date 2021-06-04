@@ -7,7 +7,7 @@ function Header(props) {
   return (
     <HeaderComponent>
       <Location />
-      <Calendar />
+      <Calendar active={13} />
     </HeaderComponent>
   )
 }
