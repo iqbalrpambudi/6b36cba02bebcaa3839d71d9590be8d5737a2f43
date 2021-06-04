@@ -47,6 +47,7 @@ export const LocationComponent = styled.div`
     width: 100%;
     display: block;
     padding: 8px;
+    cursor: pointer;
     .location__content__title {
       font-size: ${font.xs};
       color: ${color.light};
@@ -85,6 +86,7 @@ export const FoodTypesComponent = styled.div`
       align-items: center;
     }
     .foodtypes__button--dinner {
+      cursor: pointer;
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
       background-color: ${(props) =>
@@ -94,6 +96,7 @@ export const FoodTypesComponent = styled.div`
         ${(props) => (props.type === "dinner" ? color.dark : color.lighter)};
     }
     .foodtypes__button--lunch {
+      cursor: pointer;
       border-top-left-radius: 8px;
       border-bottom-left-radius: 8px;
       background-color: ${(props) =>
@@ -204,5 +207,103 @@ export const CartComponent = styled.div`
     align-items: center;
     justify-content: center;
     font-size: ${font.sm};
+  }
+`
+export const ModalComponent = styled.div`
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .modal__content {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 375px;
+    height: 80vh;
+    background-color: #fff;
+    .modal__header {
+      padding: 32px 16px 16px 16px;
+      position: relative;
+      color: ${color.dark};
+      .modal__title {
+        margin: 24px 24px 0 0;
+        font-size: ${font.xl};
+      }
+      span {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        color: ${color.dark};
+      }
+    }
+    .modal__body {
+      padding: 16px;
+      .input-group {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+        border: 1px solid ${color.lighter};
+        border-radius: 0.25rem;
+        transition: all 0.15s ease;
+        .input-group__icon {
+          margin-right: 0;
+          width: 46px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .input-group__form {
+          height: 46px;
+          font-size: ${font.lg};
+          border: 0;
+          width: calc(100% - 46px);
+          :focus-visible {
+            outline: none;
+          }
+        }
+      }
+      .list-container {
+        margin-top: 32px;
+        .list-item {
+          width: 100%;
+          display: flex;
+          margin-bottom: 16px;
+          .list-item__icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 20px;
+            background-color: ${color.lighter};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 16px;
+          }
+          .list-item__content {
+            width: calc(100% - 52px);
+            .list-item__content__title {
+              font-size: ${font.lg};
+              font-weight: 600;
+              color: ${color.dark};
+            }
+            .list-item__content__subtitle {
+              font-size: ${font.md};
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              color: ${color.light};
+            }
+          }
+        }
+      }
+    }
   }
 `
