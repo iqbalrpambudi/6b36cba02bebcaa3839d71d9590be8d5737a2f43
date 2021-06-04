@@ -1,6 +1,4 @@
 import React from "react"
-import { faCartPlus, faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { CartComponent } from "../../style/style"
 import { useSelector, useDispatch } from "react-redux"
 import { removeProduct } from "../../Redux/action/action"

@@ -31,7 +31,9 @@ function Card(props) {
           </div>
           <div className="content__footer__button">
             <a
-              onClick={() =>
+              href="/#"
+              onClick={(e) => {
+                e.preventDefault()
                 dispatch(
                   addProduct({
                     id: props.id,
@@ -39,7 +41,7 @@ function Card(props) {
                     price: props.price,
                   })
                 )
-              }
+              }}
             >
               ADD <span className="material-icons">add</span>
             </a>

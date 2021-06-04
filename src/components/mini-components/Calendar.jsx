@@ -1,5 +1,4 @@
 import React from "react"
-import moment from "moment"
 import { CalendarComponent } from "../../style/style"
 
 function Calendar(props) {

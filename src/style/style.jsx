@@ -158,6 +158,7 @@ export const CardComponents = styled.div`
       .content__footer__button {
         display: flex;
         a {
+          text-decoration: none;
           cursor: pointer;
           display: flex;
           justify-content: center;
