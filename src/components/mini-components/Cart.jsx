@@ -18,12 +18,8 @@ function Cart(props) {
         <div className="cart__content__subtitle">Termasuk ongkos kirim</div>
       </div>
       <div className="cart__icon">
-        <FontAwesomeIcon icon={faCartPlus} size="2x" />
-        <FontAwesomeIcon
-          icon={faChevronRight}
-          size="1x"
-          style={{ marginLeft: `8px` }}
-        />
+        <span className="material-icons md-36">shopping_cart</span>
+        <span className="material-icons">chevron_right</span>
       </div>
     </CartComponent>
   )

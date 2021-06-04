@@ -1,7 +1,5 @@
 import React from "react"
 import { CardComponents } from "../../style/style"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlus, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons"
 import { addProduct } from "../../Redux/action/action"
 import { useDispatch } from "react-redux"
 
@@ -14,11 +12,11 @@ function Card(props) {
       <div className="content">
         <div className="content__rating">
           <small>{props.rating}</small>
-          <FontAwesomeIcon
-            icon={faStar}
-            color={`#f9423a`}
-            style={{ marginLeft: `8px`, fontSize: `14px` }}
-          />
+          <span className="material-icons md-18 md-primary">star</span>
+          <span className="material-icons md-18 md-primary">star</span>
+          <span className="material-icons md-18 md-primary">star</span>
+          <span className="material-icons md-18 md-primary">star</span>
+          <span className="material-icons md-18 md-primary">star_half</span>
         </div>
         <div className="content__title">
           <h4>{props.name}</h4>
@@ -40,8 +38,7 @@ function Card(props) {
                 )
               }
             >
-              ADD{" "}
-              <FontAwesomeIcon icon={faPlus} style={{ marginLeft: `8px` }} />
+              ADD <span className="material-icons">add</span>
             </a>
           </div>
         </div>

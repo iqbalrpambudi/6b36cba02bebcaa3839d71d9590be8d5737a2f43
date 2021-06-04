@@ -51,8 +51,10 @@ export const LocationComponent = styled.div`
       font-size: ${font.xs};
       color: ${color.light};
     }
-    .location__content_address {
-      font-size: ${font.xl};
+    .location__content__address {
+      display: flex;
+      align-items: center;
+      font-size: ${font.lg};
       color: ${color.dark};
     }
   }
@@ -121,6 +123,7 @@ export const CardComponents = styled.div`
         font-size: ${font.lg};
         color: ${color.light};
         font-weight: 500;
+        margin-right: 8px;
       }
     }
     .content__title {

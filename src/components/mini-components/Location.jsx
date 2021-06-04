@@ -12,7 +12,8 @@ function Location(props) {
       <div className="location__content">
         <div className="location__content__title">ALAMAT PENGANTARAN</div>
         <div className="location__content__address">
-          Tokopedia Tower <FontAwesomeIcon icon={faChevronDown} color={"#f9423a"}/>
+          Tokopedia Tower{" "}
+          <span class="material-icons md-primary">expand_more</span>
         </div>
       </div>
     </LocationComponent>

@@ -5,7 +5,7 @@ export const Products = [
     by: "Kulina",
     foodtype: "lunch",
     price: 20000,
-    rating: 4,
+    rating: 4.5,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const Products = [
     by: "Kulina",
     foodtype: "lunch",
     price: 35000,
-    rating: 5,
+    rating: 4.5,
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export const Products = [
     by: "Kulina",
     foodtype: "dinner",
     price: 20000,
-    rating: 5,
+    rating: 4.5,
   },
 ]
